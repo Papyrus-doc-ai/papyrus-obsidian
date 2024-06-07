@@ -3,9 +3,8 @@
 	"name": "Papyrus",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Demo for the most amazing documentation assistant",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "The most amazing documentation assistant",
+	"author": "André Silva, Daniel Guerra, Diogo Ferreira, Eduardo Barrancos",
+	"authorUrl": "https://github.com/Papyrus-doc-ai",
 	"isDesktopOnly": false
 }
