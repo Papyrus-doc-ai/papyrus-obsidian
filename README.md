@@ -12,13 +12,25 @@ Select the target Model and hit `Save Settings`. You're ready to go
 
 ### Available Commands
 
+All accessible through the Obsidian's `Command Palette`
+
 #### Analyse Project Structure
 
 #### Review Document's Content
 
 #### Correct Document's Grammer
 
-#### Char with a Custom Persona
+`Papyrus: Correct document's grammar`
+
+It creates a temporary file with the document's content, but with its grammar corrected, and opens it in split view with the document.
+
+This way, the user can edit as they may without overriding the original document right away.
+
+Finally, one may choose to override the original document or discard the new version
+
+![Correct Grammer Command Example](docs/img/correctgrammar_example.png)
+
+#### Chat with a Custom Persona
 
 #### Import Template to Document
 
