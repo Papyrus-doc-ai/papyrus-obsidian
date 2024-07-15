@@ -10,6 +10,18 @@ Enhance your [Obsidian](https://github.com/blacksmithgu/obsidian-dataview?tab=re
 
 Select the target Model and hit `Save Settings`. You're ready to go
 
+### Split Screen Editor
+
+Most commands have a purpose of overriding the document currently being edited, however that may lead to wanted information being deleted by mistake or unwanted info being added. 
+
+So, in those cases **Papyrus** creates a temporary file with the proposed changes, opens in "split-screen-style" and a right-sidebar with a button to accept the changes or refuse them.
+
+This way the user can double check the information and even make edits to the new version as they see fit.
+
+#### Example
+
+![Correct Grammer Command Example](docs/img/CorrectGrammar.example.png)
+
 ### Available Commands
 
 All accessible through the Obsidian's `Command Palette`
@@ -26,11 +38,7 @@ All accessible through the Obsidian's `Command Palette`
 
 `Papyrus: Correct document's grammar`
 
-It creates a temporary file with the document's content, but with its grammar corrected, and opens it in split view with the document.
-
-This way, the user can edit as they may without overriding the original document right away.
-
-Finally, one may choose to override the original document or discard the new version
+Opens the [Split Screen Editor](#split-screen-editor) with a version of the document with it's grammar corrected.
 
 ![Correct Grammer Command Example](docs/img/CorrectGrammar.example.png)
 
