@@ -16,9 +16,13 @@ All accessible through the Obsidian's `Command Palette`
 
 #### Analyse Project Structure
 
+`Papyrus: Analyse project structure`
+
 #### Review Document's Content
 
-#### Correct Document's Grammer
+`Papyrus: Review document's content`
+
+#### Correct Document's Grammar
 
 `Papyrus: Correct document's grammar`
 
@@ -28,17 +32,31 @@ This way, the user can edit as they may without overriding the original document
 
 Finally, one may choose to override the original document or discard the new version
 
-![Correct Grammer Command Example](docs/img/correctgrammar_example.png)
+![Correct Grammer Command Example](docs/img/CorrectGrammar.example.png)
 
 #### Chat with a Custom Persona
 
+`Papyrus: Chat with a custom Persona`
+
 #### Import Template to Document
+
+`Papyrus: Import template to document`
 
 #### Extract Template from Document
 
-#### Create Actionable Tasks from Docuemtn
+`Papyrus: Extract template from document`
+
+#### Create Actionable Tasks from Document
+
+`Papyrus: Create actionable tasks from document`
 
 #### Translate Document to Another Language
+
+`Papyrus: Translate document to another language`
+
+It translates the document into English.
+
+![Note Translated from Portuguese to English](docs/img/TranslateDocumentToAnotherLanguage.example.png)
 
 ## Installation
 
