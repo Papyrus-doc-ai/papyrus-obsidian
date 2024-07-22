@@ -56,7 +56,7 @@ Opens a [Split Screen Editor](#split-screen-editor) with a version of the docume
 
 `Papyrus: Import template to document`
 
-**TODO**
+Pick a template you would like to apply and the plugin will open a slit screen with the current opened document formatted to fit the selected template.
 
 #### Extract Template from Document
 
