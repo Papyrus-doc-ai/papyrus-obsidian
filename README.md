@@ -8,7 +8,7 @@ Enhance your [Obsidian](https://github.com/blacksmithgu/obsidian-dataview?tab=re
 
 [Generate an api key in OpenAI](https://platform.openai.com/api-keys). Set the field `OpenAI Key` in the settings of the plugin with the generated key.
 
-Select the target Model and hit `Save Settings`. You're ready to go
+Select the target Model and hit `Save Settings`. You're ready to go!
 
 ### Split Screen Editor
 
@@ -30,15 +30,19 @@ All accessible through the Obsidian's `Command Palette`
 
 `Papyrus: Analyse project structure`
 
+**TODO**
+
 #### Review Document's Content
 
 `Papyrus: Review document's content`
+
+**TODO**
 
 #### Correct Document's Grammar
 
 `Papyrus: Correct document's grammar`
 
-Opens the [Split Screen Editor](#split-screen-editor) with a version of the document with it's grammar corrected.
+Opens a [Split Screen Editor](#split-screen-editor) with a version of the document with it's grammar corrected.
 
 ![Correct Grammer Command Example](docs/img/CorrectGrammar.example.png)
 
@@ -46,23 +50,35 @@ Opens the [Split Screen Editor](#split-screen-editor) with a version of the docu
 
 `Papyrus: Chat with a custom Persona`
 
+**TODO**
+
 #### Import Template to Document
 
 `Papyrus: Import template to document`
+
+**TODO**
 
 #### Extract Template from Document
 
 `Papyrus: Extract template from document`
 
+This command analyses the provided document and creates a template which can be then used as a starting point for future similar documents.
+
+You can define the name of the file in which it will be stored. That filed is then created under the folder `/templates`
+
+![alt text](docs/img/ExtractTemplatePrompt_example.png)
+
 #### Create Actionable Tasks from Document
 
 `Papyrus: Create actionable tasks from document`
+
+**TODO**
 
 #### Translate Document to Another Language
 
 `Papyrus: Translate document to another language`
 
-It translates the document into English.
+It translates the document into English. Opens a [Split Screen Editor](#split-screen-editor) with the translated version.
 
 ![Note Translated from Portuguese to English](docs/img/TranslateDocumentToAnotherLanguage.example.png)
 
@@ -71,3 +87,5 @@ It translates the document into English.
 How to install
 
 Not 100% how would this work with the brainiac library
+
+**TODO**
