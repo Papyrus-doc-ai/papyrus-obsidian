@@ -30,13 +30,13 @@ All accessible through the Obsidian's `Command Palette`
 
 `Papyrus: Analyse project structure`
 
-**TODO**
+The command finds possible flaws in the document. Firstly it presents the found flaws or places that can be improved to the user. Then the user can select the ones they want to tackle.
 
-#### Review Document's Content
+![Selection of flaws to tackle](docs/img/SelectionOfFailsInProjectStructure.png)
 
-`Papyrus: Review document's content`
+From there Papyrus will take each of the selected flaws and expand upon them. One at the time it will present this expanded context and ask the user for clarifications. After each question is answered (or not) Papyrus will provide a suggestion of new version of the document through a [Split Screen Editor](#split-screen-editor).
 
-**TODO**
+![Furhter Context on one of the improvements being tackled](docs/img/SpecificProjectStructureExpand.png)
 
 #### Correct Document's Grammar
 
