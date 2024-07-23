@@ -108,12 +108,12 @@ It translates the document into English. Opens a [Split Screen Editor](#split-sc
 
 ## Contributing
 
-**TODO**
+Contributions via bug reports, but fixes, documentation, and general improvements are always welcome. For more major feature work, make an issue about the future idea / reach out to the team so we can sudge feasibility and how best to implement it.
 
-## Installation
+### Local Deploy
 
-How to install
+First of all, make sure you have the [obsidian-plugin repository](https://github.com/Papyrus-doc-ai/papyrus-obsidian) and the [brainiac library repository](https://github.com/Papyrus-doc-ai/papyrus-brainiac) on your computer. And make sure they are up to date.
 
-Not 100% how would this work with the brainiac library
+Then, create a copy of the [plugin env file](deploy/plugin.env.example) with the name `plugin.env`. In it update the location of the Brainiac library and the location of the target obsidian vault.
 
-**TODO**
+Finally run the `deploy.sh` script from the root folder of the plugin.
