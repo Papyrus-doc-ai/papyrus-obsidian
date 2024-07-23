@@ -50,7 +50,22 @@ Opens a [Split Screen Editor](#split-screen-editor) with a version of the docume
 
 `Papyrus: Chat with a custom Persona`
 
-**TODO**
+With this command you can create a text chat with one of the prederfined personality or with a custom one. The personality has access to the document currently being edited.
+
+Available Personas:
+- Developer
+- Influencer
+- Project Manager
+- Xavier
+- Money Guy
+- Cook
+- Tech Blogger
+
+![Selecting Text Blogger Persona](docs/img/SelectTextBloggerPersona.example.png)
+
+![Define Custom Persona](docs/img/CustomPersona.example.png)
+
+![Talking With Text Blogger Persona](docs/img/ChattingWithTextBloggerPersona.example.png)
 
 #### Import Template to Document
 
@@ -72,7 +87,16 @@ You can define the name of the file in which it will be stored. That filed is th
 
 `Papyrus: Create actionable tasks from document`
 
-**TODO**
+This command analysis the provided document and creates a list of actionables. Each listed actionable is presented with the following properties:
+- Reasoning - the reasoning behind the proposition of the task
+- Category - the cotegory of the presented actionable
+- Subtasks - Specifications of the presented actionable
+- Dependencies - (if applicable) Skills needed to perform the task
+- Priority, Cost - Perceived priority and cost to perform the task, so the user can gadge whether to do it or not
+
+![Example of the Create Actionables command](docs/img/ActionableExample.png)
+
+Then those tasks are added to the document as checkbox at the end of it.
 
 #### Translate Document to Another Language
 
@@ -81,6 +105,10 @@ You can define the name of the file in which it will be stored. That filed is th
 It translates the document into English. Opens a [Split Screen Editor](#split-screen-editor) with the translated version.
 
 ![Note Translated from Portuguese to English](docs/img/TranslateDocumentToAnotherLanguage.example.png)
+
+## Contributing
+
+**TODO**
 
 ## Installation
 
