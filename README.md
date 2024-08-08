@@ -56,7 +56,6 @@ Available Personas:
 - Developer
 - Influencer
 - Project Manager
-- Xavier
 - Money Guy
 - Cook
 - Tech Blogger
