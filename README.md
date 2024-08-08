@@ -66,19 +66,19 @@ Available Personas:
 
 ![Talking With Text Blogger Persona](docs/img/ChattingWithTextBloggerPersona.example.png)
 
-#### Import Template to Document
+#### Import Template to Document (WIP)
 
 `Papyrus: Import template to document`
 
 Pick a template you would like to apply and the plugin will open a slit screen with the current opened document formatted to fit the selected template.
 
-#### Extract Template from Document
+#### Extract Template from Document (WIP)
 
 `Papyrus: Extract template from document`
 
 This command analyses the provided document and creates a template which can be then used as a starting point for future similar documents.
 
-You can define the name of the file in which it will be stored. That filed is then created under the folder `/templates`
+You can define the name of the file in which it will be stored. That file is then created under the folder `/templates`
 
 ![alt text](docs/img/ExtractTemplatePrompt_example.png)
 
@@ -86,7 +86,7 @@ You can define the name of the file in which it will be stored. That filed is th
 
 `Papyrus: Create actionable tasks from document`
 
-This command analysis the provided document and creates a list of actionables. Each listed actionable is presented with the following properties:
+This command analyses the provided document and creates a list of actionables. Each listed actionable is presented with the following properties:
 - Reasoning - the reasoning behind the proposition of the task
 - Category - the cotegory of the presented actionable
 - Subtasks - Specifications of the presented actionable
@@ -107,7 +107,7 @@ It translates the document into English. Opens a [Split Screen Editor](#split-sc
 
 ## Contributing
 
-Contributions via bug reports, but fixes, documentation, and general improvements are always welcome. For more major feature work, make an issue about the future idea / reach out to the team so we can sudge feasibility and how best to implement it.
+Contributions via bug reports, bug fixes, documentation, and general improvements are always welcome. For new feature work, make an issue about the future idea / reach out to the team so we can sudge feasibility and how best to implement it.
 
 ### Local Deploy
 
