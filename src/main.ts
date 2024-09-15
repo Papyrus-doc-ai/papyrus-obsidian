@@ -172,7 +172,7 @@ class SampleSettingTab extends PluginSettingTab {
 			.setDesc("Choose which GPT model to use")
 			.addDropdown(dropdown => {
 				dropdown.addOptions({
-					'gpt-4o': "GPT-4",
+					'gpt-4o': "GPT-4o",
 					'gpt-4o-mini': "GPT-4o mini",
 					'gpt-4-turbo': "GPT-4"
 				})
