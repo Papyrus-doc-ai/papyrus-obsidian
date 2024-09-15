@@ -1,20 +1,18 @@
-import { App, Editor, MarkdownView, Plugin, PluginSettingTab, Setting, Notice, } from 'obsidian';
-import { TechReviewView, VIEW_TYPE_TECH_REVIEW, TechReviewViewSettings } from './content-review/content-review.view';
-import { GeneratorView, GeneratorViewSettings, VIEW_TYPE_GENERATOR } from './analyser/analyser.view';
+import { App, Plugin, PluginSettingTab, Setting, Notice } from 'obsidian';
+import { TechReviewView, VIEW_TYPE_TECH_REVIEW } from './content-review/content-review.view';
+import { GeneratorView, VIEW_TYPE_GENERATOR } from './analyser/analyser.view';
 
-import { getEndOfEditor } from './utils/editor.util';
-import { PersonaChatView, PersonaChatViewSettings, VIEW_TYPE_PERSONA_CHAT } from './persona-chat/persona-chat.view';
-import { FormatImporterCommand, FormatImporterSettings} from "./formater/importer.command";
+import { PersonaChatView, VIEW_TYPE_PERSONA_CHAT } from './persona-chat/persona-chat.view';
+import { FormatImporterCommand } from "./formater/importer.command";
 import { detachLeavesOfTypes } from './utils/leaf.utils';
-import { GrammarCorrectorCommand, GrammarCorrectorSettings } from './grammar-corrector/grammar-corrector.command';
+import { GrammarCorrectorCommand } from './grammar-corrector/grammar-corrector.command';
 import { MarkdownComparatorConfirmView, VIEW_TYPE_MARKDOWN_COMPARATOR } from './utils/markdown-comparator.util';
-import { AnalysisCommand, StructuralAnalysisSettings } from './analyser/analyser.command';
-import { TaskifierCommand, TaskifierSettings } from './taskifier/taskfier.command';
-import { PersonaChatModal } from './persona-chat/persona-selector.modal';
-import { FormatExporterCommand, FormatExporterSettings } from './formater/exporter.command';
+import { AnalysisCommand } from './analyser/analyser.command';
+import { TaskifierCommand } from './taskifier/taskfier.command';
+import { FormatExporterCommand } from './formater/exporter.command';
 import { PersonaChatCommand } from './persona-chat/persona-chat.command';
 import { ContentReviewCommand } from './content-review/content-review.command';
-import { TranslatorCommand, TranslatorSettings } from './translator/translator.command';
+import { TranslatorCommand } from './translator/translator.command';
 import { ClientSettings } from 'libs/papyrus-brainiac';
 
 interface PapyrusPluginSettings extends ClientSettings {
@@ -174,8 +172,9 @@ class SampleSettingTab extends PluginSettingTab {
 			.setDesc("Choose which GPT model to use")
 			.addDropdown(dropdown => {
 				dropdown.addOptions({
-					'gpt-4-0125-preview': "GPT-4",
-					'gpt-3.5-turbo-0125': "GPT-3.5"
+					'gpt-4o': "GPT-4o",
+					'gpt-4o-mini': "GPT-4o mini",
+					'gpt-4-turbo': "GPT-4"
 				})
 				.setValue(this.plugin.settings.gptModel)
 				.onChange(async (value) => {
