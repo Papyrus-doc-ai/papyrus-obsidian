@@ -72,7 +72,7 @@ export async function replaceOrCreateRightLeaf(
 }
 
 export function detachLeavesOfTypes(app: App, viewTypes: Array<string>): void {
-  for (var viewType of viewTypes) {
+  for (let viewType of viewTypes) {
     app.workspace.detachLeavesOfType(viewType);
   }
 }

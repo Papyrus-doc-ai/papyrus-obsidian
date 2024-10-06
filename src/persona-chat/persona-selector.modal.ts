@@ -30,8 +30,8 @@ export class PersonaChatModal extends Modal {
 
 		contentEl.createEl('h2', {text: 'Select Persona'});
 		
-		var selectionDiv : HTMLElement= contentEl.createDiv();
-		var customPersonaDiv : HTMLElement= contentEl.createDiv();
+		const selectionDiv : HTMLElement = contentEl.createDiv();
+		const customPersonaDiv : HTMLElement = contentEl.createDiv();
 		this.personaDropDown(selectionDiv, customPersonaDiv);
 		this.createSubmitPreset(customPersonaDiv);
 		

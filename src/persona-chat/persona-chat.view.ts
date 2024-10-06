@@ -52,8 +52,8 @@ export class PersonaChatView extends ItemView {
         const container = this.containerEl.children[1];
         container.empty();
 
-        var personaChatContainer = container.createDiv({ cls: "chat-container" });
-        var titleDiv = personaChatContainer.createDiv({ cls: "chat-title" });
+        const personaChatContainer = container.createDiv({ cls: "chat-container" });
+        const titleDiv = personaChatContainer.createDiv({ cls: "chat-title" });
         titleDiv.createEl('h1', { text: this.title });
         
         this.conversationEl = personaChatContainer.createDiv('chat-conversation');

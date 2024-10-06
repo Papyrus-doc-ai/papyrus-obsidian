@@ -28,7 +28,7 @@ export class TaskifierTextModal extends Modal {
 		taskListRender.dataset["language"] = "hypermd";
 		taskListRender.innerHTML = convertMarkdownToHTML(this.tasks.map((value: Task) => value.toPrettyMarkdownString()).join("\n"));
 
-		var setting = new Setting(contentEl);
+		const setting = new Setting(contentEl);
 		
 		setting.addButton(
 			btn => btn
