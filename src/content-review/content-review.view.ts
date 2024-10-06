@@ -56,8 +56,8 @@ export class TechReviewView extends ItemView {
         const container = this.containerEl.children[1];
         container.empty();
         container.classList.add("content-review");
-        var techReviewContainer = container.createDiv({ cls: "content-review-container" });
-        var techReviewSection = techReviewContainer.createDiv({ cls: "content-review-messages"});
+        const techReviewContainer = container.createDiv({ cls: "content-review-container" });
+        const techReviewSection = techReviewContainer.createDiv({ cls: "content-review-messages"});
         techReviewSection.createEl('h1', { text: "Content Review" });
         if (this.items.length === 0) {
             techReviewSection.createEl('p', { text: "You are perfect just the way you are!" });

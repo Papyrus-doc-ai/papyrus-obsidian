@@ -26,7 +26,7 @@ export class CheckboxModal implements BuildingBlockModal {
             header.createEl('hr');
         }
 		this.container = contentEl.createDiv();
-		for(var point of this.points) {
+		for(let point of this.points) {
 			this.checkBoxElements.push(new CheckBoxElement(
 				point, 
 				this.container, 
