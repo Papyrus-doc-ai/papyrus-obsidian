@@ -18,7 +18,7 @@ export class FormatPickerModal extends FuzzySuggestModal<TFile> {
 	getTemplates(): TFile[] {
 		const templateFolder = 'templates';
 		const templateFiles:any = this.app.vault.getFolderByPath(templateFolder)?.children;
-		return templateFiles.filter((file: any) => file instanceof TFile) as TFile[];
+		return templateFiles.filter((file: any) => file instanceof TFile);
 	}
 
 	getItems(): TFile[] {
