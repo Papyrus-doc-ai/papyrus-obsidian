@@ -4,7 +4,6 @@ import { GeneratorView, VIEW_TYPE_GENERATOR } from './analyser/analyser.view';
 
 import { PersonaChatView, VIEW_TYPE_PERSONA_CHAT } from './persona-chat/persona-chat.view';
 import { FormatImporterCommand } from "./formater/importer.command";
-import { detachLeavesOfTypes } from './utils/leaf.utils';
 import { GrammarCorrectorCommand } from './grammar-corrector/grammar-corrector.command';
 import { MarkdownComparatorConfirmView, VIEW_TYPE_MARKDOWN_COMPARATOR } from './utils/markdown-comparator.util';
 import { AnalysisCommand } from './analyser/analyser.command';
@@ -125,13 +124,6 @@ export default class PapyrusPlugin extends Plugin {
 				new ContentReviewCommand(this.app).execute();
 			}
 		});
-	}
-
-	onunload() {
-		detachLeavesOfTypes(this.app, [
-			VIEW_TYPE_MARKDOWN_COMPARATOR,
-			VIEW_TYPE_GENERATOR,
-			VIEW_TYPE_TECH_REVIEW]);
 	}
 
 	async loadSettings() {
