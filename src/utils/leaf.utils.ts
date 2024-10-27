@@ -70,9 +70,3 @@ export async function replaceOrCreateRightLeaf(
   await leaf?.setViewState({ type: viewType, active: true, state: state});
   return leaf;
 }
-
-export function detachLeavesOfTypes(app: App, viewTypes: Array<string>): void {
-  for (let viewType of viewTypes) {
-    app.workspace.detachLeavesOfType(viewType);
-  }
-}
