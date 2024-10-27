@@ -26,7 +26,7 @@ export class TaskifierTextModal extends Modal {
 		const { contentEl } = this;
 		const taskListRender = contentEl.createDiv({cls: "taskListRender-markdown-editor"}).createDiv({ cls: "cm-content"});
 		taskListRender.dataset["language"] = "hypermd";
-		taskListRender.innerHTML = convertMarkdownToHTML(this.tasks.map((value: Task) => value.toPrettyMarkdownString()).join("\n"));
+		taskListRender.insertAdjacentHTML("afterbegin", convertMarkdownToHTML(this.tasks.map((value: Task) => value.toPrettyMarkdownString()).join("\n")));
 
 		const setting = new Setting(contentEl);
 		

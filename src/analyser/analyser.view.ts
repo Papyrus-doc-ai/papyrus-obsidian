@@ -78,8 +78,7 @@ export class GeneratorView extends ItemView {
         const chat_container = container.createDiv({ cls: "generator-container" });
         if (this.currentQuestion < this.suggestions.length) {
             chat_container.createEl('h4', {text: suggestion});
-            const question_section = chat_container.createDiv();
-            question_section.innerHTML = convertMarkdownToHTML(question);
+            chat_container.createDiv().insertAdjacentHTML("afterbegin", convertMarkdownToHTML(question));
             const input_section = chat_container.createDiv();
             const textarea = input_section.createEl("textarea", { cls: "middle-textarea", attr: { placeholder: "Help us help you...", rows: 5} });
             textarea.addEventListener('keydown', async (e) => {

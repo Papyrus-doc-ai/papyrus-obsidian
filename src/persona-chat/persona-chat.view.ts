@@ -83,8 +83,7 @@ export class PersonaChatView extends ItemView {
         messageEl.classList.add('chat-message');
         messageEl.addClass(message.isUser ? 'chat-message-user' : 'chat-message-ai');
     
-        const speakerEl = messageEl.createDiv();
-        speakerEl.innerHTML = convertMarkdownToHTML(message.message);
+        messageEl.createDiv().insertAdjacentHTML("afterbegin", convertMarkdownToHTML(message.message));
     
         this.conversationEl.prepend(messageEl);
     }

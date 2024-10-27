@@ -14,7 +14,7 @@ export class FormatExporterModal extends Modal {
 		const { contentEl } = this;
 		const taskListRender = contentEl.createDiv({cls: "formatTemplateRender"}).createDiv({ cls: "cm-content"});
 		taskListRender.dataset["language"] = "hypermd";
-		taskListRender.innerHTML = convertMarkdownToHTML(this.template);
+		taskListRender.insertAdjacentHTML("afterbegin", convertMarkdownToHTML(this.template));
 
 		contentEl.createDiv({cls: "bottom-right-shit"});
 		const inputEl = contentEl.createEl('input');
