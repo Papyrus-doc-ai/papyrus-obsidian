@@ -142,7 +142,7 @@ class PapyrusSettingTab extends PluginSettingTab {
 		
 		new Setting(containerEl)
 			.setName("OpenAI Key")
-			.setDesc("Key to access OpenAI's apis")
+			.setDesc("Key to access OpenAI's API")
 			.addText(text => text
 				.setPlaceholder('Enter your key')
 				.setValue(this.plugin.settings.openAIKey)
