@@ -36,7 +36,7 @@ export class TechReviewView extends ItemView {
     }
   
     getDisplayText() {
-      return "Papyrus Tech Review";
+      return "Papyrus tech review";
     }
   
     getIcon() {
@@ -58,7 +58,7 @@ export class TechReviewView extends ItemView {
         container.classList.add("content-review");
         const techReviewContainer = container.createDiv({ cls: "content-review-container" });
         const techReviewSection = techReviewContainer.createDiv({ cls: "content-review-messages"});
-        techReviewSection.createEl('h1', { text: "Content Review" });
+        techReviewSection.createEl('h1', { text: "Content review" });
         if (this.items.length === 0) {
             techReviewSection.createEl('p', { text: "You are perfect just the way you are!" });
         }
