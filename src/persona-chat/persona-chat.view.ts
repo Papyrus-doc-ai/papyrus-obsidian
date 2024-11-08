@@ -37,7 +37,7 @@ export class PersonaChatView extends ItemView {
     }
   
     getDisplayText() {
-      return "CoPapyrus Tech Review";
+      return "CoPapyrus tech review";
     }
   
     getIcon() {
