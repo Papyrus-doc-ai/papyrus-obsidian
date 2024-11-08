@@ -141,7 +141,7 @@ class PapyrusSettingTab extends PluginSettingTab {
 		containerEl.empty();
 		
 		new Setting(containerEl)
-			.setName("OpenAI Key")
+			.setName("OpenAI key")
 			.setDesc("Key to access OpenAI's apis")
 			.addText(text => text
 				.setPlaceholder('Enter your key')
@@ -152,7 +152,7 @@ class PapyrusSettingTab extends PluginSettingTab {
 				}));
 
 		new Setting(containerEl)
-			.setName("GPT Model")
+			.setName("GPT model")
 			.setDesc("Choose which GPT model to use")
 			.addDropdown(dropdown => {
 				dropdown.addOptions({
