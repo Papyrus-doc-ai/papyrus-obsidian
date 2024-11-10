@@ -37,13 +37,13 @@ export default class PapyrusPlugin extends Plugin {
 
 		this.registerView(
 			VIEW_TYPE_PERSONA_CHAT,
-			(leaf) => new PersonaChatView(leaf, this.settings)
+			(leaf) => new PersonaChatView(leaf, this.settings, this)
 		);
 
-        this.registerView(
-            VIEW_TYPE_GENERATOR,
-            (leaf) => new GeneratorView(leaf, this.settings)
-        );
+		this.registerView(
+			VIEW_TYPE_GENERATOR,
+			(leaf) => new GeneratorView(leaf, this.settings, this)
+		);
 
 		this.registerView(
 			VIEW_TYPE_MARKDOWN_COMPARATOR,
@@ -65,7 +65,7 @@ export default class PapyrusPlugin extends Plugin {
 			id: 'format-exporter',
 			name: 'Extract template from document',
 			callback: () => {
-				new FormatExporterCommand(this.app, this.settings).execute();
+				new FormatExporterCommand(this.app, this.settings, this).execute();
 			}
 		});
 
@@ -81,7 +81,7 @@ export default class PapyrusPlugin extends Plugin {
 			id: 'taskifier',
 			name: 'Create actionable tasks from document',
 			callback: () => {
-				new TaskifierCommand(this.app, this.settings).execute();
+				new TaskifierCommand(this.app, this.settings, this).execute();
 			}
 		});
 
@@ -139,7 +139,7 @@ class PapyrusSettingTab extends PluginSettingTab {
 		const { containerEl } = this;
 
 		containerEl.empty();
-		
+
 		new Setting(containerEl)
 			.setName("OpenAI Key")
 			.setDesc("Key to access OpenAI's APIs")
@@ -160,11 +160,11 @@ class PapyrusSettingTab extends PluginSettingTab {
 					'gpt-4o-mini': "GPT-4o mini",
 					'gpt-4-turbo': "GPT-4"
 				})
-				.setValue(this.plugin.settings.gptModel)
-				.onChange(async (value) => {
-                    this.plugin.settings.gptModel = value;
-                    await this.plugin.saveSettings();
-                });
+					.setValue(this.plugin.settings.gptModel)
+					.onChange(async (value) => {
+						this.plugin.settings.gptModel = value;
+						await this.plugin.saveSettings();
+					});
 			});
 	}
 }
