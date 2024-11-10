@@ -49,19 +49,3 @@ export async function createLeafInNewGroup(
 	await leaf?.setViewState({ type: viewType, active: true, state: state });
 	return leaf;
 }
-
-export async function replaceOrCreateRightLeaf(
-	app: App,
-	viewType: string,
-	state: any = {},
-	split: boolean = true): Promise<WorkspaceLeaf | null> {
-	const { workspace } = app
-	const leaves = workspace.getLeavesOfType(viewType);
-	if (leaves.length != 0) {
-		return leaves[0];
-	}
-	let leaf: WorkspaceLeaf | null = workspace.getRightLeaf(split);
-
-	await leaf?.setViewState({ type: viewType, active: true, state: state });
-	return leaf;
-}
