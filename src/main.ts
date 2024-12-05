@@ -166,15 +166,6 @@ class PapyrusSettingTab extends PluginSettingTab {
                     await this.plugin.saveSettings();
                 });
 			});
-
-		new Setting(containerEl)
-			.addButton(btn => btn
-				.setButtonText("Save Settings")
-				.setCta()
-				.onClick(() => {
-					this.plugin.load();
-					new Notice("Papyrus: Settings Saved");
-				}));
 	}
 }
 
