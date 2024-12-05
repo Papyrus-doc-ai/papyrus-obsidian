@@ -90,7 +90,7 @@ export class MarkdownComparatorConfirmView extends ItemView {
     }
 
     getDisplayText(): string {
-        return "Papyrus Markdown Comparator Confirmator";
+        return "Papyrus markdown comparator confirmator";
     }
 
     getIcon(): string {

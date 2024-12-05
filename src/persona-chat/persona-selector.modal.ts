@@ -28,7 +28,7 @@ export class PersonaChatModal extends Modal {
 		let {contentEl} = this;
 		contentEl.empty();
 
-		contentEl.createEl('h2', {text: 'Select Persona'});
+		contentEl.createEl('h2', {text: 'Select persona'});
 		
 		const selectionDiv : HTMLElement = contentEl.createDiv();
 		const customPersonaDiv : HTMLElement = contentEl.createDiv();
@@ -111,7 +111,7 @@ export class PersonaChatModal extends Modal {
 
 		new Setting(contentEl).addButton(
 			btn => btn
-				.setButtonText("Start Chat")
+				.setButtonText("Start chat")
 				.setCta()
 				.onClick(() => {
 					this.onSubmit(personaTitleInput.value, personaDescriptionInput.value);
@@ -128,7 +128,7 @@ export class PersonaChatModal extends Modal {
 
 		new Setting(contentEl).addButton(
 			btn => btn
-				.setButtonText("Start Chat")
+				.setButtonText("Start chat")
 				.setCta()
 				.onClick(() => {
 					this.onSubmit(this.persona.title, this.persona.description);

@@ -28,7 +28,7 @@ export class GeneratorView extends ItemView {
     }
 
     getDisplayText() {
-        return "Papyrus Generator";
+        return "Papyrus generator";
     }
 
     async onOpen() {
@@ -120,7 +120,7 @@ export class GeneratorView extends ItemView {
                 )
                 .addButton(
                     btn => btn
-                        .setButtonText("Next Question")
+                        .setButtonText("Next question")
                         .onClick(() => {
                             new LoadingModal(
                                 this.app,

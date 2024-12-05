@@ -152,7 +152,7 @@ class PapyrusSettingTab extends PluginSettingTab {
 				}));
 
 		new Setting(containerEl)
-			.setName("GPT Model")
+			.setName("GPT model")
 			.setDesc("Choose which GPT model to use")
 			.addDropdown(dropdown => {
 				dropdown.addOptions({
