@@ -1,22 +1,23 @@
-import { convertMarkdownToHTML } from "src/utils/html.utils";
-import {App, Modal, TFile, TFolder} from "obsidian";
+import { App, Component, MarkdownRenderer, Modal, TFile, TFolder } from "obsidian";
 
 export class FormatExporterModal extends Modal {
 	template: string;
+	private component: Component;
 
-	constructor(app: App, exportedDocument: string) {
+	constructor(app: App, exportedDocument: string, component: Component) {
 		super(app);
 		this.template = exportedDocument;
+		this.component = component;
 	}
 
 	async onOpen(): Promise<void> {
 
 		const { contentEl } = this;
-		const taskListRender = contentEl.createDiv({cls: "formatTemplateRender"}).createDiv({ cls: "cm-content"});
+		const taskListRender = contentEl.createDiv({ cls: "formatTemplateRender" }).createDiv({ cls: "cm-content" });
 		taskListRender.dataset["language"] = "hypermd";
-		taskListRender.insertAdjacentHTML("afterbegin", convertMarkdownToHTML(this.template));
+		MarkdownRenderer.render(this.app, this.template, taskListRender, "./", this.component);
 
-		contentEl.createDiv({cls: "bottom-right-shit"});
+		contentEl.createDiv({ cls: "bottom-right-shit" });
 		const inputEl = contentEl.createEl('input');
 		inputEl.type = 'text';
 		inputEl.placeholder = 'Choose filename';
