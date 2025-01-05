@@ -28,9 +28,9 @@ export class GeneratorView extends ItemView {
 		return VIEW_TYPE_GENERATOR;
 	}
 
-	getDisplayText() {
-		return "Papyrus Generator";
-	}
+    getDisplayText() {
+        return "Papyrus generator";
+    }
 
 	async onOpen() {
 		const container = this.containerEl.children[1];
@@ -71,81 +71,81 @@ export class GeneratorView extends ItemView {
 		this.clearSetting();
 		const container = this.containerEl.children[1];
 
-		if (reSubmit) {
-			this.containerEl.children[2].remove();
-		}
-
-		container.empty();
-		const chat_container = container.createDiv({ cls: "generator-container" });
-		if (this.currentQuestion < this.suggestions.length) {
-			chat_container.createEl('h4', { text: suggestion });
-			MarkdownRenderer.render(this.app, question, chat_container.createDiv(), "./", this.component);
-			const input_section = chat_container.createDiv();
-			const textarea = input_section.createEl("textarea", { cls: "middle-textarea", attr: { placeholder: "Help us help you...", rows: 5 } });
-			textarea.addEventListener('keydown', async (e) => {
-				if (e.key === 'Enter' && !e.shiftKey) {
-					// Prevent the default action to avoid submitting the form
-					e.preventDefault();
-					if (textarea.value == "") {
-						return;
-					}
-					new LoadingModal(
-						this.app,
-						async () => {
-							return await this.generator.updateDocumentWithAnswer(
-								this.getDocument(),
-								this.suggestions[this.currentQuestion],
-								textarea.value
-							);
-						},
-						(updatedDocument) => {
-							this.createDocumentContainer(updatedDocument);
-						}
-					).open();
-				}
-			});
-			this.setting = new Setting(this.containerEl)
-				.addButton(
-					btn => btn
-						.setButtonText("Regenerate")
-						.onClick(() => {
-							new LoadingModal(
-								this.app,
-								async () => {
-									this.cancelMarkdownComparator();
-									await this.getQuestion(true)
-								},
-								() => { }
-							).open();
-						})
-				)
-				.addButton(
-					btn => btn
-						.setButtonText("Next Question")
-						.onClick(() => {
-							new LoadingModal(
-								this.app,
-								async () => {
-									this.currentQuestion++;
-									if (this.markdownComparator != undefined) {
-										this.cancelMarkdownComparator();
-										await this.getQuestion(true);
-									} else {
-										await this.getQuestion(false);
-									}
-								},
-								() => { }
-							).open();
-						})
-				)
-				.addButton(
-					btn => btn
-						.setButtonText("Submit")
-						.setCta()
-						.onClick(() => {
-							if (textarea.value == "") {
-								return;
-							}
+        if (reSubmit) {
+            this.containerEl.children[2].remove();
+        }
+        
+        container.empty();
+        const chat_container = container.createDiv({ cls: "generator-container" });
+        if (this.currentQuestion < this.suggestions.length) {
+            chat_container.createEl('h4', {text: suggestion});
+            MarkdownRenderer.render(this.app, question, chat_container.createDiv(), "./", this.component);
+            const input_section = chat_container.createDiv();
+            const textarea = input_section.createEl("textarea", { cls: "middle-textarea", attr: { placeholder: "Help us help you...", rows: 5} });
+            textarea.addEventListener('keydown', async (e) => {
+                if (e.key === 'Enter'  && !e.shiftKey) {
+                    // Prevent the default action to avoid submitting the form
+                    e.preventDefault();
+                    if (textarea.value == "") {
+                        return;
+                    }
+                    new LoadingModal(
+                        this.app,
+                        async () => {
+                            return await this.generator.updateDocumentWithAnswer(
+                                this.getDocument(),
+                                this.suggestions[this.currentQuestion],
+                                textarea.value
+                            );
+                        },
+                        (updatedDocument) => {
+                            this.createDocumentContainer(updatedDocument);
+                        }
+                    ).open();
+                }
+            });
+            this.setting = new Setting(this.containerEl)
+                .addButton(
+                    btn => btn
+                        .setButtonText("Regenerate")
+                        .onClick(() => {
+                            new LoadingModal(
+                                this.app,
+                                async () => {
+                                    this.cancelMarkdownComparator();
+                                    await this.getQuestion(true)
+                                },
+                                () => {}
+                            ).open();
+                        })
+                )
+                .addButton(
+                    btn => btn
+                        .setButtonText("Next question")
+                        .onClick(() => {
+                            new LoadingModal(
+                                this.app,
+                                async () => {
+                                    this.currentQuestion++;
+                                    if (this.markdownComparator != undefined) {
+                                        this.cancelMarkdownComparator();
+                                        await this.getQuestion(true);
+                                    } else {
+                                        await this.getQuestion(false);
+                                    }
+                                },
+                                () => {}
+                            ).open();
+                        })
+                )
+                .addButton(
+                    btn => btn
+                        .setButtonText("Submit")
+                        .setCta()
+                        .onClick(() => {
+                            if (textarea.value == "") {
+                                return;
+                            }
 
 							new LoadingModal(
 								this.app,

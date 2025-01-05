@@ -23,29 +23,29 @@ export class PersonaChatView extends ItemView {
 	private chatBot: FeedBackPersonaBot;
 	private title: string;
 
-	private conversationEl: HTMLDivElement;
+    private conversationEl: HTMLDivElement;
 	private component: Component;
 
 
-	constructor(leaf: WorkspaceLeaf, settings: PersonaChatViewSettings, component: Component) {
-		super(leaf);
-		this.settings = settings;
+    constructor(leaf: WorkspaceLeaf, settings: PersonaChatViewSettings, component: Component) {
+        super(leaf);
+        this.settings = settings;
 		this.component = component;
-	}
-
-	getViewType() {
-		return VIEW_TYPE_PERSONA_CHAT;
-	}
-
-	getDisplayText() {
-		return "CoPapyrus Tech Review";
-	}
-
-	getIcon() {
-		return "message-circle";
-	}
-
-	async onOpen() {
+    }
+  
+    getViewType() {
+    	return VIEW_TYPE_PERSONA_CHAT;
+    }
+  
+    getDisplayText() {
+    	return "CoPapyrus tech review";
+    }
+  
+    getIcon() {
+      	return "message-circle";
+    }
+  
+    async onOpen() {
 
 	}
 
