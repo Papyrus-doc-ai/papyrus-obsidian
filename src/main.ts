@@ -103,7 +103,7 @@ export default class PapyrusPlugin extends Plugin {
 
 		this.addCommand({
 			id: 'persona-chat',
-			name: 'Chat with a custom Persona',
+			name: 'Chat with a custom persona',
 			callback: () => {
 				new PersonaChatCommand(this.app).execute();
 			}
@@ -141,7 +141,7 @@ class PapyrusSettingTab extends PluginSettingTab {
 		containerEl.empty();
 
 		new Setting(containerEl)
-			.setName("OpenAI Key")
+			.setName("OpenAI key")
 			.setDesc("Key to access OpenAI's APIs")
 			.addText(text => text
 				.setPlaceholder('Enter your key')
