@@ -21,7 +21,7 @@ interface PapyrusPluginSettings extends ClientSettings {
 
 const DEFAULT_SETTINGS: PapyrusPluginSettings = {
 	openAIKey: '',
-	gptModel: 'gpt-3.5-turbo-0125',
+	gptModel: 'gpt-5',
 }
 
 export default class PapyrusPlugin extends Plugin {
@@ -158,7 +158,10 @@ class PapyrusSettingTab extends PluginSettingTab {
 				dropdown.addOptions({
 					'gpt-4o': "GPT-4o",
 					'gpt-4o-mini': "GPT-4o mini",
-					'gpt-4-turbo': "GPT-4"
+					'gpt-4-turbo': "GPT-4",
+					'gpt-5': "GPT-5",
+					'gpt-5-mini': "GPT-5-mini",
+					'gpt-5-nano': "GPT-5-nano"
 				})
 					.setValue(this.plugin.settings.gptModel)
 					.onChange(async (value) => {
